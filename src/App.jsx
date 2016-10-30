@@ -1,9 +1,16 @@
 import React, {Component} from 'react';
+import Time from './Time.jsx';
+import Weather from './Weather.jsx';
+import NewsFeed from './NewsFeed.jsx';
 
 class App extends Component {
   render() {
     return (
-      <h1>Hello React :)</h1>
+      <div className="App">
+        <Time />
+        <Weather />
+        <NewsFeed />
+      </div>
     );
   }
 }
