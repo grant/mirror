@@ -1,17 +1,54 @@
 import React, {Component} from 'react';
 
 class NewsFeed extends Component {
+  constructor() {
+    super();
+    this.state = {
+      loading: true,
+      stories: [],
+    };
+
+    this.fetchTopStories(stories => {
+      this.setState({
+        loading: false,
+        stories
+      })
+    });
+  }
+
+  /**
+   * Renders a single news item
+   */
+  renderNewsItem(story) {
+    console.log(story);
+    const storyId = story.url;
+    const storyBody = story.title;
+    const newsIcon = '📰';
+    return (
+      <li key={storyId}>{`${newsIcon} ${storyBody}`}</li>
+    );
+  }
+
+  /**
+   * Renders the news feed
+   * @returns {XML}
+   */
   render() {
     return (
       <div className="NewsFeed">
         <ul className="news-items">
-          <li>Trump hosts rally in New Hampshire ahead of Iowa caucus</li>
-          <li>Iran says it flow drone over US aircraft carrier</li>
-          <li>FBI released video of fatal shooting of Oregon occupier</li>
-          <li>Before 'affluenzaa' case teen's family tangled with the law</li>
+          {this.state.stories.map(this.renderNewsItem)}
         </ul>
       </div>
     );
+  }
+
+  fetchTopStories(cb) {
+    fetch('https://api.nytimes.com/svc/topstories/v2/home.json?api-key=1735b720513abd5d22469fb2d74c96d7:3:69808199')
+      .then(jsonData => jsonData.json())
+      .then(json => {
+        cb(json.results);
+      });
   }
 }
 export default NewsFeed;
