@@ -1,5 +1,9 @@
+@import "Variables";
+
 .App {
   height: 100%;
+  position: relative;
+  padding: $MARGIN_APP_BORDER;
   background: cornflowerblue;
 
   // Default fonts

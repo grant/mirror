@@ -2,9 +2,9 @@
 
 .Time {
   position: absolute;
-  top: 5px;
-  right: 5px;
-  margin: 10px 20px;
+  top: 0;
+  right: 0;
+  margin: $MARGIN_APP_BORDER ($MARGIN_APP_BORDER * 1.3);
 
   .hour-minute {
     font-size: $FONT_SIZE_HUGE;
