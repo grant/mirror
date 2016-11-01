@@ -1,3 +1,30 @@
-.Weather {
+@import "Variables";
 
+$WEATHER_SECTION_WIDTH: 200px;
+
+.Weather {
+  .temp {
+    font-size: $FONT_SIZE_HUGE;
+
+    .degree {
+      opacity: 0.5;
+    }
+  }
+
+  .summary {
+    font-size: $FONT_SIZE_NORMAL;
+    letter-spacing: 1.2px;
+    width: $WEATHER_SECTION_WIDTH;
+  }
+
+  .precipitation {
+    margin-top: 10px;
+  }
+
+  .weather-icon {
+    fill: white;
+    // Trick to make emoji solid-colored
+    //color: transparent;
+    //text-shadow: 0 0 0 black;
+  }
 }
