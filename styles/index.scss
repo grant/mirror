@@ -6,3 +6,6 @@
 @import 'Weather';
 @import 'NewsFeed';
 
+html, body, #react-root {
+  height: 100%;
+}
