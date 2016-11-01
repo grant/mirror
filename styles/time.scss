@@ -1,5 +1,18 @@
+@import "Variables";
+
 .Time {
   position: absolute;
   top: 5px;
   right: 5px;
+  margin: 10px 20px;
+
+  .hour-minute {
+    font-size: $FONT_SIZE_HUGE;
+    margin-bottom: 10px;
+  }
+
+  .day-and-date {
+    text-align: right;
+    line-height: 1.2;
+  }
 }

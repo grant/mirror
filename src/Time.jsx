@@ -31,8 +31,10 @@ class Time extends Component {
     return (
       <ul className='Time'>
         <li className='hour-minute'>{hourMinute}</li>
-        <li className='day-of-week'>{dayOfWeek}</li>
-        <li className='date'>{date}</li>
+        <li className="day-and-date">
+          <div className='day-of-week'>{dayOfWeek}</div>
+          <div className='date'>{date}</div>
+        </li>
       </ul>
     );
   }
