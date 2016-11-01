@@ -1,4 +1,9 @@
 // Extra resets
+a {
+  text-decoration: inherit;
+  color: inherit;
+}
+
 *, *:before, *:after {
   -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
   -moz-box-sizing: border-box;    /* Firefox, other Gecko */

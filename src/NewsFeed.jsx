@@ -20,12 +20,17 @@ class NewsFeed extends Component {
    * Renders a single news item
    */
   renderNewsItem(story) {
-    console.log(story);
-    const storyId = story.url;
+    const storyURL = story.url;
+    const storyId = storyURL;
     const storyBody = story.title;
     const newsIcon = '📰';
     return (
-      <li key={storyId}>{`${newsIcon} ${storyBody}`}</li>
+      <a className="story-link" href={storyURL} key={storyURL}>
+        <li key={storyId}>
+          <span className="icon">{newsIcon}</span>
+          {` ${storyBody}`}
+        </li>
+      </a>
     );
   }
 
@@ -34,10 +39,11 @@ class NewsFeed extends Component {
    * @returns {XML}
    */
   render() {
+    let shownStories = this.state.stories.slice(0, 4);
     return (
       <div className="NewsFeed">
         <ul className="news-items">
-          {this.state.stories.map(this.renderNewsItem)}
+          {shownStories.map(this.renderNewsItem)}
         </ul>
       </div>
     );
