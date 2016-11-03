@@ -25,8 +25,10 @@ export default class Weather extends Component {
   render() {
     const degrees = Math.round(this.state.weather.feelslike_f);
     const weather = this.state.weather.weather;
+    const precipitation = +this.state.weather.precip_today_in;
     // Map from wunderground to our icon names.
     const iconName = Icon.getIconNameFromWundergroundIconName(this.state.weather.icon);
+    const WATER_EMOJI = '💦';
 
     return (
       <div className="Weather">
@@ -39,7 +41,7 @@ export default class Weather extends Component {
           </li>
           <li className="summary">{weather}</li>
           <li className="precipitation">
-            <span className="percentage">5%</span>
+            <span className="inches">{`${WATER_EMOJI} ${precipitation}"`}</span>
           </li>
         </ul>
       </div>
