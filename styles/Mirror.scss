@@ -5,9 +5,29 @@
   width: 100%;
   height: 100%;
   z-index: -100;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
 
   #videoElement {
     width: 100%;
     height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  @media (min-aspect-ratio: 16/9) {
+    #videoElement {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  @media (max-aspect-ratio: 16/9) {
+    #videoElement {
+      width: auto;
+      height: 100%;
+    }
   }
 }
