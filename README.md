@@ -1,6 +1,6 @@
 # weather
 
-Display the weather. Inspired by Black Mirror.
+Display the weather. Inspired by [Max](https://medium.com/@maxbraun/my-bathroom-mirror-is-smarter-than-yours-94b21c6671ba#.lwdlzqldw).
 
 ## How to start
 ```sh
