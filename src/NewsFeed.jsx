@@ -11,7 +11,7 @@ class NewsFeed extends Component {
     this.fetchTopStories(stories => {
       this.setState({
         loading: false,
-        stories
+        stories,
       })
     });
   }
