@@ -61,11 +61,8 @@ export default class Weather extends Component {
    * Fetches the weather data from wunderground.
    */
   fetchWeather(cb) {
-    var that = this;
-    WeatherFetcher.fetchDemo(json => {
-      that.setState({
-        weather: this.getParsedWeather(json)
-      });
-    });
+    // This is the real call, but it's disabled during testing because API rate limiting.
+    //WeatherFetcher.fetch(cb);
+    WeatherFetcher.fetchDemo(cb);
   }
 }

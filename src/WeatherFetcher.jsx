@@ -12,12 +12,11 @@ export default class WeatherFetcher {
     // We use a CORS proxy because the API doesn't allow CORS.
     const CORS_PROXY = 'https://crossorigin.me/';
 		const WEATHER_API_URL = 'http://api.wunderground.com/api/ac079d5b3e302ce9/conditions/q/CA/San_Francisco.json';
-		fetch(CORS_PROXY + WEATHER_API_URL)
+    const URL = CORS_PROXY + WEATHER_API_URL;
+		fetch(URL)
 			.then(jsonData => jsonData.json())
 			.then(json => {
-				this.setState({
-					weather: this.getParsedWeather(json)
-				});
+				cb(json.current_observation);
 			});
   }
 
