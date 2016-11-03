@@ -2,9 +2,10 @@
 @import 'reset';
 
 @import 'App';
+@import "Mirror";
+@import 'NewsFeed';
 @import 'Time';
 @import 'Weather';
-@import 'NewsFeed';
 
 html, body, #react-root {
   height: 100%;

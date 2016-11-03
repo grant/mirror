@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import Time from './Time.jsx';
 import Weather from './Weather.jsx';
 import NewsFeed from './NewsFeed.jsx';
+import Mirror from './Mirror.jsx';
 
 class App extends Component {
   render() {
@@ -10,6 +11,7 @@ class App extends Component {
         <Time />
         <Weather />
         <NewsFeed />
+        <Mirror />
       </div>
     );
   }
