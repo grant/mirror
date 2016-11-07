@@ -2,6 +2,10 @@
 
 A mirror that display the time, weather, and trending news.
 
+## Demo
+
+![mirror](https://cloud.githubusercontent.com/assets/744973/20046038/ceeea27c-a45a-11e6-9467-704fe6350292.gif)
+
 ## How to start
 ```sh
 npm i
@@ -20,10 +24,6 @@ npm start
 - Babel
 - React
 - SCSS
-
-## Demo
-
-![mirror](https://cloud.githubusercontent.com/assets/744973/20046038/ceeea27c-a45a-11e6-9467-704fe6350292.gif)
 
 ## Inspiration
 
