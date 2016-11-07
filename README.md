@@ -4,5 +4,6 @@ A mirror that display the weather. Inspired by [Max](https://medium.com/@maxbrau
 
 ## How to start
 ```sh
+npm i
 npm start
 ```
