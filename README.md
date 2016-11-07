@@ -1,12 +1,25 @@
 # mirror
 
-A mirror that display the weather.
+A mirror that display the time, weather, and trending news.
 
 ## How to start
 ```sh
 npm i
 npm start
 ```
+
+### Features
+- Weather, Temperature, and Precipitation
+  - From Wunderground API
+- Date/Time
+- 4 top news articles
+  - From the New York Times API
+
+### Tech
+- Webpack
+- Babel
+- React
+- SCSS
 
 ## Demo
 
